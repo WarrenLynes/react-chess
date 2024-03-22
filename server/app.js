@@ -27,8 +27,8 @@ class App {
 
     authController(this.apiRouter);
     userController(this.apiRouter);
-    this.apiRouter.use('/games', gameController());
 
+    this.apiRouter.use('/games', gameController());
     this.apiRouter.post('/upload/:gameId', async (req, res, next) => {
       const { image } = req.body;
       const { gameId } = req.params;
