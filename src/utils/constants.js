@@ -1,0 +1,77 @@
+
+export const BOARD_BLACK_COLOR = '#1800ff3d'
+export const BOARD_WHITE_COLOR = 'transparent';
+
+export const spaces = [
+  { "id": "A8", "color": BOARD_WHITE_COLOR },
+  { "id": "B8", "color": BOARD_BLACK_COLOR },
+  { "id": "C8", "color": BOARD_WHITE_COLOR },
+  { "id": "D8", "color": BOARD_BLACK_COLOR },
+  { "id": "E8", "color": BOARD_WHITE_COLOR },
+  { "id": "F8", "color": BOARD_BLACK_COLOR },
+  { "id": "G8", "color": BOARD_WHITE_COLOR },
+  { "id": "H8", "color": BOARD_BLACK_COLOR },
+
+  { "id": "A7", "color": BOARD_BLACK_COLOR },
+  { "id": "B7", "color": BOARD_WHITE_COLOR },
+  { "id": "C7", "color": BOARD_BLACK_COLOR },
+  { "id": "D7", "color": BOARD_WHITE_COLOR },
+  { "id": "E7", "color": BOARD_BLACK_COLOR },
+  { "id": "F7", "color": BOARD_WHITE_COLOR },
+  { "id": "G7", "color": BOARD_BLACK_COLOR },
+  { "id": "H7", "color": BOARD_WHITE_COLOR },
+
+  { "id": "A6", "color": BOARD_WHITE_COLOR },
+  { "id": "B6", "color": BOARD_BLACK_COLOR },
+  { "id": "C6", "color": BOARD_WHITE_COLOR },
+  { "id": "D6", "color": BOARD_BLACK_COLOR },
+  { "id": "E6", "color": BOARD_WHITE_COLOR },
+  { "id": "F6", "color": BOARD_BLACK_COLOR },
+  { "id": "G6", "color": BOARD_WHITE_COLOR },
+  { "id": "H6", "color": BOARD_BLACK_COLOR },
+
+  { "id": "A5", "color": BOARD_BLACK_COLOR },
+  { "id": "B5", "color": BOARD_WHITE_COLOR },
+  { "id": "C5", "color": BOARD_BLACK_COLOR },
+  { "id": "D5", "color": BOARD_WHITE_COLOR },
+  { "id": "E5", "color": BOARD_BLACK_COLOR },
+  { "id": "F5", "color": BOARD_WHITE_COLOR },
+  { "id": "G5", "color": BOARD_BLACK_COLOR },
+  { "id": "H5", "color": BOARD_WHITE_COLOR },
+
+  { "id": "A4", "color": BOARD_WHITE_COLOR },
+  { "id": "B4", "color": BOARD_BLACK_COLOR },
+  { "id": "C4", "color": BOARD_WHITE_COLOR },
+  { "id": "D4", "color": BOARD_BLACK_COLOR },
+  { "id": "E4", "color": BOARD_WHITE_COLOR },
+  { "id": "F4", "color": BOARD_BLACK_COLOR },
+  { "id": "G4", "color": BOARD_WHITE_COLOR },
+  { "id": "H4", "color": BOARD_BLACK_COLOR },
+
+  { "id": "A3", "color": BOARD_BLACK_COLOR },
+  { "id": "B3", "color": BOARD_WHITE_COLOR },
+  { "id": "C3", "color": BOARD_BLACK_COLOR },
+  { "id": "D3", "color": BOARD_WHITE_COLOR },
+  { "id": "E3", "color": BOARD_BLACK_COLOR },
+  { "id": "F3", "color": BOARD_WHITE_COLOR },
+  { "id": "G3", "color": BOARD_BLACK_COLOR },
+  { "id": "H3", "color": BOARD_WHITE_COLOR },
+
+  { "id": "A2", "color": BOARD_WHITE_COLOR },
+  { "id": "B2", "color": BOARD_BLACK_COLOR },
+  { "id": "C2", "color": BOARD_WHITE_COLOR },
+  { "id": "D2", "color": BOARD_BLACK_COLOR },
+  { "id": "E2", "color": BOARD_WHITE_COLOR },
+  { "id": "F2", "color": BOARD_BLACK_COLOR },
+  { "id": "G2", "color": BOARD_WHITE_COLOR },
+  { "id": "H2", "color": BOARD_BLACK_COLOR },
+
+  { "id": "A1", "color": BOARD_BLACK_COLOR },
+  { "id": "B1", "color": BOARD_WHITE_COLOR },
+  { "id": "C1", "color": BOARD_BLACK_COLOR },
+  { "id": "D1", "color": BOARD_WHITE_COLOR },
+  { "id": "E1", "color": BOARD_BLACK_COLOR },
+  { "id": "F1", "color": BOARD_WHITE_COLOR },
+  { "id": "G1", "color": BOARD_BLACK_COLOR },
+  { "id": "H1", "color": BOARD_WHITE_COLOR }
+];
