@@ -19,9 +19,9 @@ function authController(app) {
         return res.status(400).send('EMAIL & PASSWORD REQUIRED');
 
       const existingUser = await User.findOne({ email: email.toLowerCase() });
+
       if (existingUser)
         return res.status(409).send('USER ALREADY EXISTS.');
-
 
       const encryptedPassword = await bcrypt.hash(password, 10);
       const user = await User.create({
@@ -30,7 +30,11 @@ function authController(app) {
         displayName
       });
 
-      const token = jwt.sign({ _id: user._id, email: user.email }, process.env.JWT_SECRET, { expiresIn: "2h" });
+      const token = jwt.sign(
+        { _id: user._id, email: user.email },
+        process.env.JWT_SECRET,
+        { expiresIn: "2h" }
+      );
 
       res.status(201).json({ user, token });
     } catch (error) {

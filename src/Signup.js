@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useLocation, useNavigate} from 'react-router-dom';
-import {login} from './utils/api';
+import {useLocation, useNavigate} from 'react-router-dom';
+import {register} from './utils/api';
 import {useDispatch, useSelector} from "react-redux";
 
-export default function Login() {
+export default function Signup() {
   const navigate = useNavigate();
   const {authenticated} = useSelector(({auth}) => auth);
-  const [newUser, setNewUser] = useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -24,14 +23,11 @@ export default function Login() {
     const form = new FormData(e.currentTarget);
     const email = form.get('email');
     const password = form.get('password');
+    const displayName = form.get('name');
 
-    if(newUser)
-      return /*authService.register()*/
-
-    login({email, password}).then((user) => {
+    register({email, password, displayName}).then((user) => {
       localStorage.setItem('email', email);
-      dispatch({type: 'LOGIN', user});
-      navigate('/', {replace: true});
+      navigate('/login', {replace: true});
     });
   }
 
@@ -39,7 +35,6 @@ export default function Login() {
     <form onSubmit={handleSubmit}>
       <div className="form">
         <div style={{marginBottom: '2rem'}}>
-          <h4>email</h4>
           <input
             type="text"
             name="email"
@@ -49,7 +44,16 @@ export default function Login() {
             style={{display: 'block',marginBottom: '2rem'}}
           />
 
-          <h4>password</h4>
+          <input
+            required
+            type="text"
+            name="name"
+            label="name"
+            variant="outlined"
+            placeholder="name"
+            style={{display: 'block',marginBottom: '2rem'}}
+          />
+
           <input
             type="password"
             name="password"
@@ -61,12 +65,7 @@ export default function Login() {
           />
         </div>
 
-        <Link to="/signup"> Signup </Link>
-
-        <br/>
-
-        <button type='submit' variant="outlined" className='btn'>{newUser ? 'Register' : 'Login'}</button>
-        {/*<Button variant="text" onClick={() => setNewUser(!newUser)} >{newUser ? 'Login' : 'Register'}</Button>*/}
+        <button type='submit' variant="outlined" className='btn'>Register</button>
       </div>
     </form>
   )

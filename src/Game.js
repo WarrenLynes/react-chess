@@ -57,7 +57,7 @@ export default function Game() {
     if (!game || !game.isFinished)
       return;
 
-    if (playerTeam === 'white') {
+    /*if (playerTeam === 'white') {
       html2canvas(document.getElementById("board"), {
         allowTaint: true,
         useCORS: true,
@@ -73,7 +73,7 @@ export default function Game() {
         console.log(e);
       });
 
-    }
+    }*/
   }, [game]);
 
   const onWinner = ({ winner, game, move }) => {

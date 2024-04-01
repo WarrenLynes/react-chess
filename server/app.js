@@ -32,9 +32,7 @@ class App {
     this.apiRouter.post('/upload/:gameId', async (req, res, next) => {
       const { image } = req.body;
       const { gameId } = req.params;
-
       const game = await GameModel.findOne({ gameId });
-
       const imagePath = base64Img.imgSync(
         image,
         './public',

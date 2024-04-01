@@ -52,6 +52,7 @@ class Connection {
 
     this.io.sockets.emit('updateOpenGames', Object.keys(openGames));
   }
+
   _getGame(id) {
     const game = games[id];
     // const _game = await GameModel.findById(id);

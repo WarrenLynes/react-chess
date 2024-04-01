@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate, } from "react-router-dom";
-import Login from './Login';
 import App from './App';
 import AuthWrapper from "./AuthWrapper";
 import React, { useEffect, useState } from "react";
@@ -8,13 +7,14 @@ import { useDispatch, useSelector } from "react-redux";
 import Game from "./Game";
 import Home from "./Home";
 import User from "./User";
+import Signup from "./Signup";
+import Login from './Login';
 
 function AuthRouter() {
   const { authenticated } = useSelector(({ auth }) => auth);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [, setAmbiguity] = useState(true);
-
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -33,6 +33,7 @@ function AuthRouter() {
     <BrowserRouter>
       <Routes>
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
 
         <Route path='/app' element={
           <AuthWrapper>

@@ -7,7 +7,6 @@ export function authenticate() {
       loginWithToken(token).then((user) =>
         dispatch({ type: 'LOGIN', user }));
     }
-
   }
 }
 

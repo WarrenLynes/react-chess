@@ -33,11 +33,14 @@ export async function login({ email, password }) {
   return { ...user, token };
 }
 
-export async function register({ email, password }) {
+export async function register({ email, password, displayName }) {
   try {
     const user = await fetch('/api/register', {
-      method: 'POST',
-      body: JSON.stringify({ email, password })
+      'method': 'POST',
+      'body': JSON.stringify({ email, password, displayName }),
+      'headers': {
+        'Content-Type': 'application/json'
+      }
     }).then((res) => res.json());
     return user;
   } catch (e) {
